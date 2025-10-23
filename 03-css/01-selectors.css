@@ -6,16 +6,50 @@
   --royalblue: #4169e1;
   --teal: #008080;
   --violet: #9400d3;
+  --skyblue: #87CEEB;
 }
 
 /* Use attribute selectors for the first part of the exercise */
 
-li[class] {
-  color: var(--red);
+li[class="cat"], 
+#cat{
+  color: var(--teal);
 }
 
-/* Use descendant, child, and sibling selectors for the second part */
 
-section li {
+li[class$="og"]{
+  color: var(--magenta);
+}
+
+li[class="parrot"]{
   color: var(--green);
+}
+
+li[class="donkey"] {
+  color: var(--royalblue);
+}
+
+li[class~="dog"][class~="cat"][class~="parrot"] {
+  color: var(--royalblue);
+}
+
+
+
+
+
+
+
+
+
+/* Use descendant, child, and sibling selectors for the second part */
+section li {
+	color: var(--green)
+}
+
+.first ~ li{
+	color: var(--magenta)
+}
+
+.second + li{
+	color: var(--royalblue)
 }

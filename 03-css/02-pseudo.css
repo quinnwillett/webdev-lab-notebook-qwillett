@@ -1,4 +1,39 @@
+:root{
+  --primary: #4169e1;
+  --accent: #9400d3;
+  --highlight: #ff00ff;
+  --bg: #f9f9ff;
+  --text: #222;
+}
+
 .container {
   width: 600px;
   margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  color: var(--primary);
+}
+
+.paragraph {
+  width: 600px;
+  margin: 20px auto;
+  color: var(--text);
+}
+
+
+.paragraph:hover {
+	background-color: var(--highlight);
+}
+
+.container:active {
+	color: var(--accent);
+}
+
+
+.paragraph::first-letter {
+	font-size: 3em;
+}
+
+.container::selection {
+	background: orange;
 }
