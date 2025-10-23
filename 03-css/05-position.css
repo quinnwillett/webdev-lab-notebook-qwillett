@@ -7,20 +7,40 @@
 .box {
   padding: 10px;
   color: var(--white);
+  margin-right: 1%;
+}
+
+.main{
+  margin-top: 12%;
+  display: flex;
 }
 
 .static {
   background-color: var(--darkviolet);
+  width: 300px;
+  height: 400px;
+  position: static;
+  
 }
 
 .relative {
   background-color: var(--purple);
+  width: 300px;
+  height: 400px;
+  position: relative;
 }
 
 .absolute {
   background-color: var(--maroon);
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
 }
 
 .fixed {
   background-color: var(--darkgolden);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
