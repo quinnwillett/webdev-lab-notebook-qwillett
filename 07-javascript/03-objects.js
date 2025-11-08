@@ -1,21 +1,31 @@
 let result = {};
+let keys =[];
 
 const insertItem = (key, value) => {
+  result[key] = value;
   // insertItem the property with key and value into result
   return key;
 };
 
 const deleteItem = (key) => {
+  delete result[key]; 
   // remove the property with key from result
   return key;
 };
 
 const lookupItem = (key) => {
+  if(result[key]){
+    return result[key];
+  }
+  else{
+    return "No valid key";
+  }
   // return the value from result that is associated with key
-  return key;
 };
 
 const printItems = () => {
+  
+  return Object.keys(result).join(', ');
   // return a string of the concatenated key in result, separated by commas
 };
 
